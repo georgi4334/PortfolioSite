@@ -1,0 +1,60 @@
+$yellowCol: #fbb040;
+$purpleHoverCol: rgb(109, 90, 179);
+
+
+.contactMe {
+    margin: 250px 0;
+    h2{
+        font-size: 34px;
+        text-align: center;
+    }
+    hr{
+        width: 70%;
+    }
+    .underline{
+        width: 32px;
+        border: 3px solid $yellowCol;
+        &:hover{
+            border: 3px solid black;
+            background: black;
+            transition: all .2s linear;
+        }
+
+    }
+    .contactMeButton{
+        display: inline-block;
+        a{
+            text-decoration: none;
+            color: $yellowCol;
+            &:hover{
+                color: $purpleHoverCol;
+                transition: all .2s linear;
+            }
+        }
+     
+    }
+    .socialIcons{
+        display: flex;
+        justify-content: center;
+        i{
+            font-size: 32px;
+            padding: 5px;
+            margin: 0 10px;
+            color: black;
+            &:hover{
+                color: $yellowCol;
+                transition: all .2s linear;
+            }
+        }
+    }
+}
+.foooterWrap{
+    
+    .innerFooterWrapper{
+        width: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

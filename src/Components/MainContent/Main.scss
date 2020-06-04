@@ -1,0 +1,207 @@
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1.1)
+    }
+
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.75)
+    }
+
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1.2)
+    }
+}
+
+.icon-scroll,
+.icon-scroll:before {
+    position: absolute;
+    left: 50%;
+}
+
+
+.icon-scroll {
+    position: relative;
+    z-index: 234;
+    width: 24px;
+    height: 40px;
+    margin-left: -20px;
+    top: 50%;
+    margin-top: 65px;
+    box-shadow: inset 0 0 0 1px rgb(0, 0, 0);
+    border-radius: 25px;
+}
+
+.icon-scroll:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: rgb(0, 0, 0);
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
+
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+}
+
+.scrollText {
+    margin-right: 14px;
+    margin-top: 1px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.wrapperText {
+    position: relative;
+    z-index: 111;
+}
+
+.containerBulb {
+    margin: 50px auto;
+    width: 450px;
+
+}
+
+.logoBulb {
+    width: 100%;
+}
+
+.headerText p,
+h1 {
+    text-align: center;
+}
+
+.headerText p {
+    font-size: 20px;
+}
+
+.headerText h1 {
+    font-size: 35px;
+    font-weight: bold;
+
+}
+
+.hr {
+    width: 7%;
+}
+
+.waveWrapper {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    right: 0px;
+    left: 0;
+    top: -1px;
+}
+
+
+
+.waveWrapperInner {
+
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to bottom, #547A82 1%, rgba(62, 172, 168, 0.836) 99%);
+}
+
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+
+}
+
+.bgBottom {
+    z-index: 5;
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+
+}
+
+.waveTop {
+    background-size: 50% 100px;
+
+}
+
+.waveAnimation .waveTop {
+    animation: move-wave 4s;
+    -webkit-animation: move-wave 5s;
+    -webkit-animation-delay: 5s;
+    animation-delay: 4s;
+}
+
+.waveMiddle {
+    background-size: 50% 120px;
+}
+
+.waveAnimation .waveMiddle {
+    animation: move_wave 25s linear infinite;
+}
+
+.waveBottom {
+    background-size: 50% 100px;
+}
+
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+/*Footer*/
+.waveWrapperF {
+    position: relative;
+    overflow: hidden;
+    bottom: -2px;
+    left: 0;
+    height: 30vh;
+    transform: rotate(180deg) scaleX(-1);
+    margin-bottom: -200px;
+
+}
+
+.waveWrapperInnerF {
+
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to bottom, #547A82 1%, #3EACA8 99%);
+}
+
+@media only screen and (max-width: 600px) {
+
+    .waveWrapperInner,
+    .waveWrapperInnerF {
+        width: 220%;
+
+    }
+
+}
