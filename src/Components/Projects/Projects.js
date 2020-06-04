@@ -62,7 +62,7 @@ export default function Projects() {
           </animated.div>
         </div>
 
-        <div className="col-lg-6 col-md-6 col-sm-12 rightCol">
+        <div className="col-lg-6 col-md-6 col-sm-12 rightCol" >
           <div>
             <div
               className="imgContainer allRecipes"
